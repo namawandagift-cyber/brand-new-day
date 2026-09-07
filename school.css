@@ -1,0 +1,13 @@
+.hero-section {
+    background-image: url("images/first.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.program-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
