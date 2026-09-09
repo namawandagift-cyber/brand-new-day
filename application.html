@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Application</title>
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-image: url('images/final.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .application-section {
+            padding: 80px 0;
+        }
+
+        .application-info {
+            background-color: #0d6efd;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            height: 100%;
+        }
+
+        .application-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .application-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item h6 {
+            margin-bottom: 5px;
+        }
+
+        .form-control,
+        .form-select {
+            padding: 12px;
+        }
+
+        .btn-apply {
+            padding: 12px 30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    
+
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">META SCHOOL</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="school.html">home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-one">Students</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">contactus</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-three">Collaboration
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+
+   
+
+    <section class="application-section">
+
+        <div class="container">
+
+          
+            <div class="text-center mb-5">
+
+                <h1 class="fw-bold text-white">
+                    Student Application
+                </h1>
+
+                <h2 class="text-white fs-5">
+                    Apply to join our school by completing the form below.
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+               
+
+                <div class="col-lg-5">
+
+                    <div class="application-info">
+
+                        <h2>
+                            Join Our School
+                        </h2>
+
+                        <p class="mb-5">
+                            We welcome students who are ready to learn,
+                            grow and become responsible members of society.
+                        </p>
+
+
+                        <div class="info-item">
+
+                            <h6>
+                                Application Process
+                            </h6>
+
+                            <p class="mb-0">
+                                Complete the application form and submit
+                                your information for review.
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <h6>
+                                Admission
+                            </h6>
+
+                            <p class="mb-0">
+                                Successful applicants will be contacted
+                                with further admission information.
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <h6>
+                                School Location
+                            </h6>
+
+                            <p class="mb-0">
+                                Kampala, Uganda
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <h6>
+                                Contact Us
+                            </h6>
+
+                            <p class="mb-0">
+                                +256 70999787134
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-lg-7">
+
+                    <div class="application-form">
+
+                        <h2 class="mb-4">
+                            Application Form
+                        </h2>
+
+
+                        <form>
+
+
+                          
+
+                            <h5 class="mb-3">
+                                Student Information
+                            </h5>
+
+
+                            <div class="mb-3">
+
+                                <label for="fullName" class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="fullName"
+                                    placeholder="Enter student's full name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="dob" class="form-label">
+                                        Date of Birth
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        class="form-control"
+                                        id="dob"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="gender" class="form-label">
+                                        Gender
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="gender"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select gender
+                                        </option>
+
+                                        <option value="male">
+                                            Male
+                                        </option>
+
+                                        <option value="female">
+                                            Female
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CLASS -->
+
+                            <div class="mb-3">
+
+                                <label for="class" class="form-label">
+                                    Class/Form Applying For
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="class"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select class
+                                    </option>
+
+                                    <option value="senior-one">
+                                        Senior One
+                                    </option>
+
+                                    <option value="senior-two">
+                                        Senior Two
+                                    </option>
+
+                                    <option value="senior-three">
+                                        Senior Three
+                                    </option>
+
+                                    <option value="senior-four">
+                                        Senior Four
+                                    </option>
+
+                                    <option value="senior-five">
+                                        Senior Five
+                                    </option>
+
+                                    <option value="senior-six">
+                                        Senior Six
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- PREVIOUS SCHOOL -->
+
+                            <div class="mb-4">
+
+                                <label for="previousSchool" class="form-label">
+                                    Previous School
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="previousSchool"
+                                    placeholder="Enter previous school"
+                                >
+
+                            </div>
+
+
+                            <hr class="mb-4">
+
+
+                            
+
+                            <h5 class="mb-3">
+                                Parent / Guardian Information
+                            </h5>
+
+
+                            <div class="mb-3">
+
+                                <label for="guardianName" class="form-label">
+                                    Parent / Guardian Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="guardianName"
+                                    placeholder="Enter parent or guardian name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="guardianPhone" class="form-label">
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="guardianPhone"
+                                        placeholder="+256..."
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="guardianEmail" class="form-label">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="guardianEmail"
+                                        placeholder="Enter email"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                           
+                            <div class="mb-3">
+
+                                <label for="address" class="form-label">
+                                    Address
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="Enter home address"
+                                >
+
+                            </div>
+
+
+                           
+
+                            <div class="mb-4">
+
+                                <label for="message" class="form-label">
+                                    Additional Information
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="message"
+                                    rows="4"
+                                    placeholder="Enter any additional information..."
+                                ></textarea>
+
+                            </div>
+
+
+                           
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-apply">
+
+                                Submit Application
+
+                            </button>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+
+
