@@ -1,321 +1,761 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MY SCHOOL</title>
+    <!-- Your CSS -->
     <link rel="stylesheet" href="school.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
 </head>
+
+
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg bg-primary bg-opacity-5 navbar-dark sticky-top">
-        <div class="container ">
-            <a class="navbar-brand fw-bold " href="#">META SCHOOL</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <!--
+         NAVIGATION BAR
+     -->
+
+    <nav class="navbar navbar-expand-lg glass-nav navbar-dark fixed-top">
+
+        <div class="container">
+
+            <!-- School / Brand Name -->
+            <a
+                class="navbar-brand fw-bold text-primary"
+                href="school.html">
+
+                ATLAS
+
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <!-- Navigation Links -->
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="school.html">Home</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section-one">Students</a>
-                    </li>
+                    <li class="nav-item ms-3">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactus.html">contactus</a>
-                    </li>
+                        <a
+                            class="nav-link active text-primary fw-bold"
+                            href="school.html">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section-three">Collaboration
+                            Home
 
                         </a>
+
                     </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link text-primary fw-bold"
+                            href="#section-one">
+
+                            Students
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link text-primary fw-bold"
+                            href="contactus.html">
+
+                            Contact Us
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link text-primary fw-bold"
+                            href="#section-three">
+
+                            Collaboration
+
+                        </a>
+
+                    </li>
+
                 </ul>
+
             </div>
-        </div> 
+
+        </div>
+
     </nav>
 
- <div class="container-fluid p-0">
-    <div class="hero-section text-white text-center p-5  position-relative d-flex align-items-center justify-content-center"
-         style="height: 720px;">
+
+
+    <!-- 
+         HERO SECTION
+    -->
+
+    <section
+        class="hero-section text-white text-center position-relative d-flex align-items-center justify-content-center"
+        style="height: 720px;">
 
         <div>
+
+            <!-- Badge -->
             <span class="badge bg-warning text-dark">
+
                 New Lesson
+
             </span>
 
-            <h1 class="display-5 fw-bold"style="height: 50px;">
+
+            <!-- Main Heading -->
+            <h1 class="display-5 fw-bold">
+
                 WE OFFER QUALITY EDUCATION
+
             </h1>
 
+
+            <!-- Description -->
             <p class="lead">
-                Our school is committed to providing a nurturing environment
-                for students to excel academically and personally.
+
+                Our school is committed to providing a nurturing
+                environment for students to excel academically
+                and personally.
+
             </p>
 
-            <a href="#section-two"
-               class="btn btn-light text-white bg-primary fw-bold mt-3">
+
+            <!-- Start Button -->
+            <a
+                href="#section-two"
+                class="btn btn-light text-primary fw-bold mt-3">
+
                 Start
+
             </a>
-        </div>
-
-    </div>
-    <div class="container mt-5">
-        <div class="row g-3">
-<div class="col-md-6">
-
-    <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
-
-        <div class="carousel-inner rounded">
-
-           
-            <div class="carousel-item active">
-                <img src="images/thegirls.jpg"
-                     class="d-block w-100"
-                     alt="Students">
-            </div>
-
-            
-            <div class="carousel-item">
-                <img src="images/reading.jpg"
-                     class="d-block w-100"
-                     alt="Students learning">
-            </div>
-
-          
-            <div class="carousel-item">
-                <img src="images/play ground.jpg"
-                     class="d-block w-100"
-                     alt="School activities">
-            </div>
 
         </div>
 
-      
-        <button class="carousel-control-prev"
-                type="button"
-                data-bs-target="#aboutCarousel"
-                data-bs-slide="prev">
+    </section>
 
-            <span class="carousel-control-prev-icon"></span>
 
-        </button>
 
-        
-        <button class="carousel-control-next"
-                type="button"
-                data-bs-target="#aboutCarousel"
-                data-bs-slide="next">
+    <!-- 
+         ABOUT US SECTION
+     -->
 
-            <span class="carousel-control-next-icon"></span>
+    <section
+        class="container mt-5"
+        id="section-one">
 
-        </button>
+        <div class="row g-3 align-items-center">
 
-    </div>
 
-</div>
+            <!-- 
+                 IMAGE CAROUSEL
+            -->
 
-        <div class="col-md-6" id="section-one">
-            <h2>About Us</h2>
-            <p>
-                We are a dedicated team of educators committed to providing quality education and fostering a love for learning in our students.
-                the school offers a wide range of academic programs, extracurricular activities, and support services to ensure that every student has the opportunity to succeed.
-                it was established with the goal of creating a positive and inclusive learning environment where students can develop their skills, knowledge, and character.
-                it was founded with the vision of creating a nurturing and inclusive learning environment where students can thrive academically, socially, and emotionally.
-           we believe in the power of education to transform lives and empower individuals to reach their full potential.
-           we are committed to providing a safe and supportive learning environment where students can grow, explore their interests, and develop the skills they need to succeed in the future.
-           the school is dedicated to fostering a love for learning, encouraging critical thinking, and promoting creativity and innovation among its students.
-           and we strive to create a community where students, teachers, and parents work together to achieve academic excellence and personal growth.
-           we call on all students to embrace the values of respect, responsibility, and integrity as they navigate their educational journey.
-            </p>
+            <div class="col-md-6">
 
-               <a href="scholarship.html" class="link-primary fw-bold">
-                        Click Here
+                <div
+                    id="aboutCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel">
 
-                    </a>
-        </div>
 
-    </div>
-</div>
-           
+                    <div class="carousel-inner rounded">
 
-    <div class="container mt-5" id="section-two">
 
-    <h2 class="text-center text-primary mb-4">OUR PROGRAMS</h2>
+                        <!-- Image 1 -->
+                        <div class="carousel-item active">
 
-    <div class="row g-3">
+                            <img
+                                src="images/thegirls.jpg"
+                                class="d-block w-100"
+                                alt="Students in classroom">
 
-        
-        <div class="col-md-4">
-            <div class="bg-white p-3 border rounded shadow-sm h-100 text-center">
+                        </div>
 
-                <img src="images/group.jpg"
-                     alt="Classrooms"
-                     class="img-fluid rounded"
-                     style="height: 180px; width: 100%; object-fit: cover;">
 
-                <div class="mt-2">
-                    <h5>nusery section</h5>
+                        <!-- Image 2 -->
+                        <div class="carousel-item">
 
-                    <p class="small">
-                        Our classrooms are designed to provide a comfortable
-                        and conducive learning environment for students,
-                        equipped with modern technology and resources.
-                    </p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Read More
-              </button>
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Nursery Section</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Our nursery section is designed to provide a nurturing and stimulating environment for young learners. We focus on early childhood development, fostering curiosity, creativity, and social skills through play-based learning activities. Our experienced educators create a safe and supportive space where children can explore, learn, and grow at their own pace.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+                            <img
+                                src="images/reading.jpg"
+                                class="d-block w-100"
+                                alt="Students learning">
+
+                        </div>
+
+
+                        <!-- Image 3 -->
+                        <div class="carousel-item">
+
+                            <img
+                                src="images/play ground.jpg"
+                                class="d-block w-100"
+                                alt="School activities">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Previous Button -->
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#aboutCarousel"
+                        data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"></span>
+
+                    </button>
+
+
+                    <!-- Next Button -->
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#aboutCarousel"
+                        data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"></span>
+
+                    </button>
+
                 </div>
 
             </div>
-        </div>
 
 
-       
-        <div class="col-md-4">
-            <div class="bg-white p-3 border rounded shadow-sm h-100 text-center">
 
-                <img src="images/games.jpg"
-                     alt="Games"
-                     class="img-fluid rounded"
-                     style="height: 180px; width: 100%; object-fit: cover;">
+            <!--
+                 ABOUT TEXT
+             -->
 
-                <h5 class="mt-2">Games</h5>
+            <div class="col-md-6">
 
-                <p class="small">
-                    Our students participate in games and activities
-                    that encourage teamwork and physical fitness.
+                <h2>
+
+                    About Us
+
+                </h2>
+
+
+                <p>
+
+                    We are a dedicated team of educators committed
+                    to providing quality education and fostering a
+                    love for learning in our students.
+
+                    The school offers a wide range of academic
+                    programs, extracurricular activities, and support
+                    services to ensure that every student has the
+                    opportunity to succeed.
+
+                    It was established with the goal of creating a
+                    positive and inclusive learning environment where
+                    students can develop their skills, knowledge,
+                    and character.
+
+                    We believe in the power of education to transform
+                    lives and empower individuals to reach their full
+                    potential.
+
+                    We are committed to providing a safe and supportive
+                    learning environment where students can grow,
+                    explore their interests, and develop the skills
+                    they need to succeed in the future.
+
+                    The school is dedicated to fostering a love for
+                    learning, encouraging critical thinking, and
+                    promoting creativity and innovation among its
+                    students.
+
+                    We strive to create a community where students,
+                    teachers, and parents work together to achieve
+                    academic excellence and personal growth.
+
+                    We call on all students to embrace the values
+                    of respect, responsibility, and integrity as
+                    they navigate their educational journey.
+
                 </p>
 
+
+                <!-- Scholarship Link -->
+                <a
+                    href="scholarship.html"
+                    class="link-primary fw-bold">
+
+                    Click Here
+
+                </a>
+
             </div>
+
         </div>
 
+    </section>
 
-        
-        <div class="col-md-4"> 
-    <div class="bg-white p-3 border rounded shadow-sm h-100 text-center"> 
- 
-        <img src="images/group.jpg" 
-             alt="Student Activities" 
-             class="img-fluid rounded" 
-             style="height: 180px; width: 100%; object-fit: cover;"> 
- 
-        <h5 class="mt-2">Student Activities</h5> 
- 
-        <p class="small"> 
-            Students participate in activities that support 
-            learning, creativity and personal development. 
-        </p>
 
+
+    <!-- 
+         OUR PROGRAMS SECTION
+     -->
+
+    <section
+        class="container mt-5"
+        id="section-two">
+
+
+        <!-- Section Heading -->
+        <h2 class="text-center text-primary mb-4">
+
+            OUR PROGRAMS
+
+        </h2>
+
+
+        <div class="row g-3">
+
+
+            <!-- 
+                  NURSERY
+             -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="bg-white p-3 border rounded shadow-sm h-100 text-center">
+
+
+                    <img
+                        src="images/group.jpg"
+                        alt="Nursery section"
+                        class="img-fluid rounded"
+                        style="height: 180px; width: 100%; object-fit: cover;">
+
+
+                    <div class="mt-2">
+
+                        <h5>
+
+                            Nursery Section
+
+                        </h5>
+
+
+                        <p class="small">
+
+                            Our classrooms are designed to provide
+                            a comfortable and conducive learning
+                            environment for students, equipped with
+                            modern technology and resources.
+
+                        </p>
+
+
+                        <!-- Read More Button -->
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#nurseryModal">
+
+                            Read More
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!--
+                - GAMES
+             -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="bg-white p-3 border rounded shadow-sm h-100 text-center">
+
+
+                    <img
+                        src="images/games.jpg"
+                        alt="Games"
+                        class="img-fluid rounded"
+                        style="height: 180px; width: 100%; object-fit: cover;">
+
+
+                    <h5 class="mt-2">
+
+                        Games
+
+                    </h5>
+
+
+                    <p class="small">
+
+                        Our students participate in games and
+                        activities that encourage teamwork and
+                        physical fitness.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!--
+                 STUDENT ACTIVITIES
+            -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="bg-white p-3 border rounded shadow-sm h-100 text-center">
+
+
+                    <img
+                        src="images/group.jpg"
+                        alt="Student Activities"
+                        class="img-fluid rounded"
+                        style="height: 180px; width: 100%; object-fit: cover;">
+
+
+                    <h5 class="mt-2">
+
+                        Student Activities
+
+                    </h5>
+
+
+                    <p class="small">
+
+                        Students participate in activities that
+                        support learning, creativity and personal
+                        development.
+
+                    </p>
+
+
+                    <!-- Loading Spinner -->
+                    <div
+                        class="spinner-border text-primary"
+                        role="status"
+                        style="width: 20px; height: 20px;">
+
+                    </div>
+
+
+                    <!-- Enroll Text -->
+                    <div class="mt-2 fw-bold text-primary">
+
+                        ENROLL TODAY
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+ 
+         <!-- NURSERY MODAL -->
+
+    <div
+        class="modal fade"
+        id="nurseryModal"
+        tabindex="-1"
+        aria-labelledby="nurseryModalLabel"
+        aria-hidden="true">
+
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+
+                    <h1
+                        class="modal-title fs-5"
+                        id="nurseryModalLabel">
+
+                        Nursery Section
+
+                    </h1>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+
+                    </button>
+
+                </div>
+
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+
+                    <p>
+
+                        Our nursery section is designed to provide
+                        a nurturing and stimulating environment for
+                        young learners.
+
+                        We focus on early childhood development,
+                        fostering curiosity, creativity, and social
+                        skills through play-based learning activities.
+
+                        Our experienced educators create a safe and
+                        supportive space where children can explore,
+                        learn, and grow at their own pace.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+   
+         <!-- SCHOOL STATISTICS -->
     
-        <div class="spinner-border text-primary" 
-             role="status" 
-             style="width: 20px; height: 20px;">
-        </div>
+    <section
+        class="container mt-4"
+        id="section-three">
 
-        <div class="mt-2 fw-bold text-primary">
-            ENROLL TODAY
-        </div>
- 
-    </div> 
-</div>
-
-    </div>
-</div>
+        <div class="row g-3">
 
 
-<<div class="container mt-4">
+            <!-- Teachers -->
+            <div class="col-md-3">
 
-    <div class="row g-3">
+                <div
+                    class="bg-white text-dark p-3 rounded text-center border border-dark">
 
-        
-        <div class="col-md-3">
-            <div class="bg-white text-dark p-3 rounded text-center border border-dark">
-                <h5>25+</h5>
-                <p class="small mb-0">Qualified Teachers</p>
+                    <h5>25+</h5>
+
+                    <p class="small mb-0">
+
+                        Qualified Teachers
+
+                    </p>
+
+                </div>
+
             </div>
-        </div>
 
-        
-        <div class="col-md-3" id="section-three">
-            <div class="bg-success p-3 rounded text-white text-center">
-                <h5>800+</h5>
-                <p class="small mb-0">Active Students</p>
+
+            <!-- Students -->
+            <div class="col-md-3">
+
+                <div
+                    class="bg-success p-3 rounded text-white text-center">
+
+                    <h5>800+</h5>
+
+                    <p class="small mb-0">
+
+                        Active Students
+
+                    </p>
+
+                </div>
+
             </div>
-        </div>
 
-       
-        <div class="col-md-3">
-            <div class="bg-info p-3 border border-white rounded text-center">
-                <h5>15</h5>
-                <p class="small mb-0">School Clubs</p>
+
+            <!-- Clubs -->
+            <div class="col-md-3">
+
+                <div
+                    class="bg-info p-3 rounded text-center">
+
+                    <h5>15</h5>
+
+                    <p class="small mb-0">
+
+                        School Clubs
+
+                    </p>
+
+                </div>
+
             </div>
-        </div>
 
-       
-        <div class="col-md-3">
-            <div class="bg-warning p-3 rounded text-center">
-                <h5>98%</h5>
-                <p class="small mb-0">Parent Satisfaction</p>
+
+            <!-- Parent Satisfaction -->
+            <div class="col-md-3">
+
+                <div
+                    class="bg-warning p-3 rounded text-center">
+
+                    <h5>98%</h5>
+
+                    <p class="small mb-0">
+
+                        Parent Satisfaction
+
+                    </p>
+
+                </div>
+
             </div>
+
         </div>
 
-    </div>
+    </section>
+<
+         <!-- ADMISSION UPDATES -->
+  
 
-</div>
- <div class="container-fluid mt-5">
-        <div class="bg-white p-4 rounded border shadow-sm mb-4">
-            <h2 class="text-primary">Admission Updates</h2>
- <p>Application deadlines are approaching. Please submit your applications before the deadline.</p>
+    <section class="container-fluid mt-5">
+
+        <div
+            class="bg-white p-4 rounded border shadow-sm mb-4">
+
+
+            <h2 class="text-primary">
+
+                Admission Updates
+
+            </h2>
+
+
+            <p>
+
+                Application deadlines are approaching.
+                Please submit your applications before the deadline.
+
+            </p>
+
+
+            <!-- Placeholder Animation -->
             <p class="placeholder-glow">
-                <span class="placeholder col-8"></span>
-                <span class="placeholder col-6"></span>
-                <span class="placeholder col-10"></span>
-                <span class="placeholder col-4"></span>
-          </p>
-          <div>
 
-<a href="application.html" class="btn btn-outline-primary">Apply Now</a>
-</div> 
+                <span class="placeholder col-8 mb-2"></span>
+
+                <span class="placeholder col-6 mb-2"></span>
+
+                <span class="placeholder col-10 mb-2"></span>
+
+                <span class="placeholder col-4 mb-2"></span>
+
+            </p>
+
+
+            <!-- Application Button -->
+            <a
+                href="application.html"
+                class="btn btn-outline-primary">
+
+                Apply Now
+
+            </a>
+
         </div>
-    </div>
 
-    <div class="container-fluid bg-dark text-white text-center p-4">
-        <h2>META SCHOOL</h2>
+    </section>
+    <!-- >footer -->
+    <footer
+        class="container-fluid bg-dark text-white text-center p-4">
+
+
+        <h2>
+
+            META SCHOOL
+
+        </h2>
+
 
         <p class="mb-1">
-           Thanks for contacting us we hope to hear from you next time 
-        
+
+            Thanks for contacting us.
+            We hope to hear from you next time.
+
         </p>
 
-        <a href="scholarship.html" class="link-warning">
-            Apply for Scholarship
-        </a>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <a
+            href="scholarship.html"
+            class="link-warning">
+
+            Apply for Scholarship
+
+        </a>
+
+    </footer>
+
+         <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
+
 </html>
+```

@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 80%;
+    opacity: 90%;
     margin:auto 0;
 
 }
@@ -12,4 +12,10 @@
     height: 250px;
     object-fit: cover;
     display: block;
+}
+.glass-nav {
+    backdrop-filter: blur(10px);
+    background-color: rgba(203, 201, 250, 0.29);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
