@@ -1,0 +1,150 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exersize day 18.</title>
+    <style>
+        .container {
+            width: 80%;
+            /* Takes full width on small screens */
+            padding-right: 15px;
+            /* Prevents content from hitting screen edges */
+            padding-left: 15px;
+            margin-right: auto;
+            /* Centers the container horizontally */
+            margin-left: auto;
+            box-sizing: border-box;
+            /* Ensures padding doesn't add to the width */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aut ullam sint nostrum laborum? Sequi
+            quasi qui accusamus facere voluptate ab quos animi! Id eum tempora quis sunt vero quae.</p>
+    </div>
+
+    <div class="container">
+        <button onclick="addNumbers(12, 8)">Sum of 12 and 8</button>
+        <p id="sumOf"></p>
+
+        <br>
+        <button onclick="calculateArea(6, 4)">Area of rectangle</button>
+        <p id="areaOf"></p>
+
+        <br>
+        <button onclick="getResult(10, 0)">Grade Status</button>
+        <p id="grade"></p>
+    </div>
+    <form>
+        <label for="paid">Your amount:</label>
+        <input type="number" name="payedAmount" id="paid">
+        <button type="submit" onclick="Calc(event)">Pay</button>
+    </form>
+    <div> 
+        <h5 id="printed"></h5>
+        <h1 id="more"></h1>
+    </div>
+    <button onclick="for(let number=0; number <= 10; number+= 2) {
+            document.getElementById('evenNumbers').innerHTML += 'This is an even  number: ' + number + '<br>';}">Even
+        Numbers</button>
+    <div id="evenNumbers"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+        <script src="main.js"></script>
+    <script>
+        function Calc(event) {
+            event.preventDefault();
+            const fee = 500000;
+            const paidAm = parseFloat(document.getElementById("paid").value) || 0;
+            Math.max(0, fee - paidAm);
+            if(paidAm > fee){
+                document.getElementById("more").innerHTML = "You have over paid";
+            }
+            else{
+                document.getElementById("more").innerHTML = "Thank you";
+            }
+            const totalSum = fee - paidAm;
+            document.getElementById("printed").innerHTML = totalSum;
+        }
+
+        console.log("New Hill Academy");
+        // if total cost of books if 1 is 2500 how much is 4 books
+        console.log("500,000-350,000");
+        console.log(500000 - 350000);
+
+
+        console.log("If total cost of books if 1 is 2500 how much is 4 books");
+        console.log(4 * 2500);
+
+
+function addNumbers(a, b){
+    const sum = a + b;
+    document.getElementById("sumOf").innerText = "The sum is, " + sum ;
+}
+
+function calculateArea(length, width, height){
+    const area = length * width * height;
+    document.getElementById("areaOf").innerText = "The area is, " + area ;
+}
+
+function getResult(mark){
+    if (mark > 100 || mark < 0){
+        window.alert("Invalid Input");
+    }
+    else if(mark >= 50){
+    document.getElementById("grade").innerText = "Pass";
+    }   
+    else{
+    document.getElementById("grade").innerText = "Try again";
+}
+ }
+ 
+  for(let number=0; number <= 10; number+= 2) {
+            document.getElementById("evenNumbers").innerHTML += "This is an even  number: " + number + "<br>";}
+        // My First Example
+        // Open the browser console to see the results.
+
+        // The first line displays the text 500000 - 350000. The second displays 150000.
+
+        // Add a message containing your school name
+
+        // Add a calculation for 4 books costing 2500 UGX each.
+
+        // Exercise 2
+        // A school buys 5 pens at 1000 UGX each and pays with 10000 UGX. Write down the problem before coding.
+
+        // 1. Identify the input, process and output.
+
+        // 2. Write pseudocode to calculate the total cost and the change.
+
+        // 3. Use console.log to display a heading, the total cost and the change.
+
+        // 4. Run your program and compare the results with your manual calculation.
+
+        // 5. Explain which programming pattern you used.
+
+        const noOfPens = 6;
+        var unitCost = 1000;
+        let total = noOfPens * unitCost;
+        const paidAm = 10000;
+        const change = paidAm - total
+        console .log("Change for school boy.\nHe paid "+paidAm+"\nChange is "+change+"");
+
+
+
+        // 
+    </script>
+</body>
+
+</html>

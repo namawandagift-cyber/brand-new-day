@@ -14,7 +14,625 @@
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
+<style>
+/* ===============================
+   UNIVERSITY EXPERIENCE SECTION
+================================ */
 
+.university-programs {
+    background: #f7f8fa;
+    color: #14243c;
+}
+
+/* Section heading */
+
+.programs-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.programs-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ad8745;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+}
+
+.programs-heading h2 {
+    margin: 0;
+    color: #14243c;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1.4px;
+}
+
+.programs-heading > p {
+    max-width: 380px;
+    margin: 0 0 4px;
+    color: #677386;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+/* Editorial image cards */
+
+.experience-card {
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+    background: #14243c;
+    isolation: isolate;
+}
+
+.experience-card > img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.experience-card:hover > img {
+    transform: scale(1.07);
+}
+
+/* Dark image gradient */
+
+.experience-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 21, 39, 0.08) 0%,
+        rgba(9, 21, 39, 0.15) 30%,
+        rgba(9, 21, 39, 0.90) 100%
+    );
+    transition: background 0.3s ease;
+}
+
+.experience-card:hover .experience-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 21, 39, 0.12) 0%,
+        rgba(9, 21, 39, 0.28) 35%,
+        rgba(9, 21, 39, 0.96) 100%
+    );
+}
+
+/* Number at top */
+
+.experience-number {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* Content at bottom */
+
+.experience-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    color: #ffffff;
+}
+
+.experience-category {
+    display: block;
+    margin-bottom: 12px;
+    color: #e4c58b;
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.experience-content h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.experience-content p {
+    max-width: 340px;
+    margin-bottom: 22px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Explore button */
+
+.experience-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 0 7px;
+    border: 0;
+    border-bottom: 1px solid #d9b66f;
+    background: transparent;
+    color: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.experience-link span {
+    color: #e4c58b;
+    transition: transform 0.25s ease;
+}
+
+.experience-link:hover {
+    color: #e4c58b;
+}
+
+.experience-link:hover span {
+    transform: translate(4px, -3px);
+}
+
+/* Modal */
+
+.experience-modal {
+    overflow: hidden;
+    border: 0;
+    border-radius: 5px;
+}
+
+.experience-modal .modal-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.experience-modal .modal-title {
+    color: #14243c;
+    font-weight: 750;
+}
+
+.experience-modal .modal-body {
+    padding: 24px;
+    color: #647184;
+    line-height: 1.9;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 991.98px) {
+    .programs-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .programs-heading > p {
+        max-width: 600px;
+    }
+
+    .experience-card {
+        height: 420px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .experience-card {
+        height: 400px;
+    }
+
+    .experience-content {
+        padding: 24px;
+    }
+
+    .programs-heading h2 {
+        letter-spacing: -0.8px;
+    }
+}
+
+.campus-section {
+  background: #f7f8fa;
+  color: #14243a;
+  font-family: Arial, sans-serif;
+}
+
+.campus-label {
+  display: inline-block;
+  color: #a67c3d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.campus-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 750;
+  letter-spacing: -2.5px;
+  line-height: 1.05;
+}
+
+.campus-title span {
+  color: #a67c3d;
+}
+
+.campus-description {
+  color: #687386;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 410px;
+  margin-left: auto;
+}
+
+.campus-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #14243a;
+}
+
+.campus-main {
+  height: 440px;
+}
+
+.campus-secondary {
+  height: 275px;
+}
+
+.campus-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.campus-card:hover img {
+  transform: scale(1.05);
+}
+
+.campus-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    transparent 25%,
+    rgba(10, 22, 39, 0.88) 100%
+  );
+}
+
+.campus-overlay span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #e7c58d;
+}
+
+.campus-overlay h3 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.campus-overlay p {
+  font-size: 13px;
+  margin-bottom: 0;
+  color: #e3e8ef;
+}
+
+.campus-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px 0 0;
+}
+
+.campus-bottom p {
+  color: #687386;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.campus-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 1px solid #d5dbe3;
+  border-radius: 50%;
+  color: #14243a;
+  text-decoration: none;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.campus-arrow:hover {
+  background: #14243a;
+  color: white;
+  border-color: #14243a;
+}
+
+@media (max-width: 991px) {
+  .campus-description {
+    margin: 20px 0 0;
+  }
+
+  .campus-main {
+    height: 350px;
+  }
+
+  .campus-secondary {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .campus-title {
+    letter-spacing: -1.5px;
+  }
+
+  .campus-main {
+    height: 320px;
+  }
+
+  .campus-secondary {
+    height: 260px;
+  }
+
+  .campus-overlay {
+    padding: 22px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-card > img,
+    .experience-overlay,
+    .experience-link span {
+        transition: none;
+    }
+    
+}
+.admissions-section {
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.admissions-panel {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 55px;
+  border: 1px solid #e7ebf1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(21, 39, 66, 0.05);
+}
+
+.admissions-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2459a9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #2b9a67;
+  border-radius: 50%;
+}
+
+.admissions-title {
+  color: #172942;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 750;
+  letter-spacing: -2px;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.admissions-title span {
+  color: #2861b6;
+}
+
+.admissions-description {
+  max-width: 510px;
+  color: #687589;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.admissions-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 480px;
+  padding: 17px;
+  margin-bottom: 28px;
+  background: #f4f7fc;
+  border-left: 3px solid #2861b6;
+  border-radius: 4px;
+}
+
+.notice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  color: #fff;
+  background: #2861b6;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.admissions-notice h6 {
+  color: #172942;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.admissions-notice p {
+  color: #687589;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.admissions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 14px 22px;
+  color: #fff;
+  background: #2056a5;
+  border: 1px solid #2056a5;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.admissions-btn:hover {
+  color: #fff;
+  background: #173f7b;
+  border-color: #173f7b;
+  transform: translateY(-2px);
+}
+
+.admissions-btn span {
+  font-size: 18px;
+}
+
+.admissions-progress-card {
+  padding: 30px;
+  background: #f8f9fc;
+  border: 1px solid #e9edf4;
+  border-radius: 8px;
+}
+
+.progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 22px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #e4e9f0;
+}
+
+.progress-eyebrow {
+  color: #748197;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.progress-heading h5 {
+  color: #172942;
+  font-size: 19px;
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+.progress-symbol {
+  color: #2861b6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 21px 0;
+  border-bottom: 1px solid #e4e9f0;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  color: #2861b6;
+  background: #e8effb;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.step-content h6 {
+  color: #172942;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 2px 0 6px;
+}
+
+.step-content p {
+  color: #748197;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.progress-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 22px;
+  color: #526177;
+  font-size: 12px;
+}
+
+.footer-arrow {
+  color: #2861b6;
+  font-size: 22px;
+}
+
+@media (max-width: 767px) {
+  .admissions-panel {
+    padding: 28px 20px;
+  }
+
+  .admissions-title {
+    letter-spacing: -1px;
+  }
+
+  .admissions-progress-card {
+    padding: 22px 18px;
+  }
+}
+
+</style>
 </head>
 
 
@@ -110,9 +728,9 @@
                     <li class="nav-item">
                         <a
                             class="nav-link px-lg-3"
-                            href="#section-three"
+                            href="payfess.html"
                         >
-                            Collaboration
+                           checkFees
                         </a>
                     </li>
 
@@ -318,8 +936,7 @@
                                 src="https://images.pexels.com/photos/7972485/pexels-photo-7972485.jpeg"
                                 class="d-block w-100"
                                 alt="Students in classroom">
-
-                        </div>
+                           </div>
 
 
                         <!-- Image 2 -->
@@ -414,309 +1031,366 @@
 
 
     <!-- 
-         OUR PROGRAMS SECTION
-     -->
+       
+<!-- UNIVERSITY PROGRAMS -->
+<section class="university-programs py-5" id="section-two">
+    <div class="container">
 
-    <section
-        class="container mt-5"
-        id="section-two">
+        <!-- Heading -->
+        <div class="programs-heading mb-5">
+            <div>
+                <span class="programs-label">CAMPUS EXPERIENCE</span>
+                <h2>Life Beyond Academics</h2>
+            </div>
 
+            <p>
+                Discover experiences that inspire leadership,
+                strengthen communities, and shape future leaders.
+            </p>
+        </div>
 
-        <!-- Section Heading -->
-        <h2 class="text-center text-primary mb-4">
+        <!-- Three Creative Program Cards -->
+        <div class="row g-4">
 
-            OUR PROGRAMS
-
-        </h2>
-
-
-        <div class="row g-3">
-
-
-            <!-- 
-                  NURSERY
-             -->
-
-            <div class="col-md-4">
-
-                <div
-                    class="bg-white p-3 border rounded shadow-sm h-100 text-center">
-
+            <!-- CARD ONE: SPORTS -->
+            <div class="col-md-6 col-lg-4">
+                <article class="experience-card">
 
                     <img
                         src="https://images.pexels.com/photos/29624092/pexels-photo-29624092.jpeg"
-                        alt="sports"
-                        class="img-fluid rounded"
-                        style="height: 180px; width: 100%; object-fit: cover;">
+                        alt="University sports and recreation"
+                        loading="lazy">
 
+                    <div class="experience-overlay"></div>
 
-                    <div class="mt-2">
+                    <span class="experience-number">01 / 03</span>
 
-                        <h5>
+                    <div class="experience-content">
+                        <span class="experience-category">
+                            WELLNESS & TEAMWORK
+                        </span>
 
-                          SPORTS
+                        <h3>Sports & Recreation</h3>
 
-                        </h5>
-
-
-                        <p class="small">
-                            Our sports program encourages students to
-                            stay active, develop teamwork skills, and
-                            build confidence .
+                        <p>
+                            Building discipline, teamwork,
+                            resilience, and a spirit of excellence.
                         </p>
 
-
-                        <!-- Read More Button -->
                         <button
                             type="button"
-                            class="btn btn-primary"
+                            class="experience-link"
                             data-bs-toggle="modal"
-                            data-bs-target="#nurseryModal">
-
-                            Read More
-
+                            data-bs-target="#sportsModal">
+                            Explore Program
+                            <span>↗</span>
                         </button>
-
                     </div>
 
-                </div>
-
+                </article>
             </div>
 
-
-
-            <!--
-                - GAMES
-             -->
-
-            <div class="col-md-4">
-
-                <div
-                    class="bg-white p-3 border rounded shadow-sm h-100 text-center">
-
-
-                    <img
-                        src="https://images.pexels.com/photos/6146981/pexels-photo-6146981.jpeg"
-                        alt="Games"
-                        class="img-fluid rounded"
-                        style="height: 180px; width: 100%; object-fit: cover;">
-
-
-                    <h5 class="mt-2">
-
-                        Games
-
-                    </h5>
-
-
-                    <p class="small">
-
-                        Our students participate in games and
-                        activities that encourage teamwork and
-                        physical fitness.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!--
-                 STUDENT ACTIVITIES
-            -->
-
-            <div clas  s="col-md-4">
-
-                <div
-                    class="bg-white p-3 border rounded shadow-sm h-100 text-center">
-
+            <!-- CARD TWO: STUDENT LIFE -->
+            <div class="col-md-6 col-lg-4">
+                <article class="experience-card">
 
                     <img
                         src="https://images.pexels.com/photos/8199169/pexels-photo-8199169.jpeg"
-                        alt="Student Activities"
-                        class="img-fluid rounded"
-                        style="height: 180px; width: 100%; object-fit: cover;">
+                        alt="Students participating in campus activities"
+                        loading="lazy">
 
+                    <div class="experience-overlay"></div>
 
-                    <h5 class="mt-2">
+                    <span class="experience-number">02 / 03</span>
 
-                        Student Activities
+                    <div class="experience-content">
+                        <span class="experience-category">
+                            LEADERSHIP & COMMUNITY
+                        </span>
 
-                    </h5>
+                        <h3>Student Life</h3>
 
+                        <p>
+                            Find your community, discover your
+                            talents, and make meaningful connections.
+                        </p>
 
-                    <p class="small">
-
-                        Students participate in activities that
-                        support learning, creativity and personal
-                        development.
-
-                    </p>
-
-
-                    <!-- Loading Spinner -->
-                    <div
-                        class="spinner-border text-primary"
-                        role="status"
-                        style="width: 20px; height: 20px;">
-
+                        <button
+                            type="button"
+                            class="experience-link"
+                            data-bs-toggle="modal"
+                            data-bs-target="#studentLifeModal">
+                            Explore Program
+                            <span>↗</span>
+                        </button>
                     </div>
 
-
-                    <!-- Enroll Text -->
-                    <div class="mt-2 fw-bold text-primary">
-
-                        ENROLL TODAY
-
-                    </div>
-
-                </div>
-
+                </article>
             </div>
 
-        </div>
+            <!-- CARD THREE: INNOVATION -->
+            <div class="col-md-6 col-lg-4">
+                <article class="experience-card">
 
-    </section>
- 
-         <!-- NURSERY MODAL -->
+                    <img
+                        src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+                        alt="University technology and innovation"
+                        loading="lazy">
 
-    <div
-        class="modal fade"
-        id="nurseryModal"
-        tabindex="-1"
-        aria-labelledby="nurseryModalLabel"
-        aria-hidden="true">
+                    <div class="experience-overlay"></div>
 
+                    <span class="experience-number">03 / 03</span>
 
-        <div class="modal-dialog">
+                    <div class="experience-content">
+                        <span class="experience-category">
+                            RESEARCH & INNOVATION
+                        </span>
 
-            <div class="modal-content">
+                        <h3>Innovation & Discovery</h3>
 
+                        <p>
+                            Transform ideas into solutions
+                            through creativity, research, and technology.
+                        </p>
 
-                <!-- Modal Header -->
-                <div class="modal-header">
+                        <button
+                            type="button"
+                            class="experience-link"
+                            data-bs-toggle="modal"
+                            data-bs-target="#innovationModal">
+                            Explore Program
+                            <span>↗</span>
+                        </button>
+                    </div>
 
-                    <h1
-                        class="modal-title fs-5"
-                        id="nurseryModalLabel">
-
-                        Nursery Section
-
-                    </h1>
-
-
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close">
-
-                    </button>
-
-                </div>
-
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-
-                    <p>
-
-                        Our nursery section is designed to provide
-                        a nurturing and stimulating environment for
-                        young learners.
-
-                        We focus on early childhood development,
-                        fostering curiosity, creativity, and social
-                        skills through play-based learning activities.
-
-                        Our experienced educators create a safe and
-                        supportive space where children can explore,
-                        learn, and grow at their own pace.
-
-                    </p>
-
-                </div>
-
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-
-                    <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal">
-
-                        Close
-
-                    </button>
-
-                </div>
-
+                </article>
             </div>
 
         </div>
 
     </div>
-   
-         <!-- SCHOOL STATISTICS -->
-    
-    
+</section>
+
+
+<!-- SPORTS MODAL -->
+<div class="modal fade" id="sportsModal" tabindex="-1"
+     aria-labelledby="sportsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content experience-modal">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="sportsModalLabel">
+                    Sports & Recreation
+                </h2>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Sports and recreation give students opportunities
+                to develop physical fitness, discipline, teamwork,
+                leadership, and resilience while building lasting
+                relationships across the university community.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- STUDENT LIFE MODAL -->
+<div class="modal fade" id="studentLifeModal" tabindex="-1"
+     aria-labelledby="studentLifeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content experience-modal">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="studentLifeModalLabel">
+                    Student Life
+                </h2>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                University life extends beyond lectures through
+                student associations, clubs, leadership opportunities,
+                cultural experiences, and community engagement.
+                These experiences help students develop confidence,
+                collaboration, and a sense of belonging.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- INNOVATION MODAL -->
+<div class="modal fade" id="innovationModal" tabindex="-1"
+     aria-labelledby="innovationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content experience-modal">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="innovationModalLabel">
+                    Innovation & Discovery
+                </h2>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Innovation and discovery encourage students to
+                investigate challenges, explore emerging technologies,
+                conduct research, and develop practical solutions
+                that can contribute to society.
+            </div>
+        </div>
+    </div>
+</div>
+
    
     </section>
 
-         <!-- ADMISSION UPDATES -->
-  
+        
+<section class="campus-section py-5">
+  <div class="container py-lg-4">
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-7">
+        <span class="campus-label">LIFE ON CAMPUS</span>
+        <h2 class="campus-title mt-3">
+          More than a place<br>
+          <span>to learn.</span>
+        </h2>
+      </div>
+      <div class="col-lg-5">
+        <p class="campus-description">
+          Discover a campus where ideas grow, friendships begin,
+          and every student has room to become something greater.
+        </p>
+      </div>
+    </div>
 
-    <section class="container-fluid mt-5">
-
-        <div
-            class="bg-white p-4 rounded border shadow-sm mb-4">
-
-
-            <h2 class="text-primary">
-
-                Admission Updates
-
-            </h2>
-
-
-            <p>
-
-                Application deadlines are approaching.
-                Please submit your applications before the deadline.
-
-            </p>
-
-
-            
-           <div class="progress mb-2" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar text-bg-primary" style="width: 25%">25%</div>
-         </div>
-         <div class="progress mb-2" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar text-bg-primary" style="width: 50%">50%</div>
-         </div>
-          <div class="progress mb-2" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar text-bg-primary" style="width: 75%">75%</div>
-         </div>
-          <div class="progress mb-2" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar text-bg-primary" style="width: 100%">100%</div>
+    <div class="row g-4 campus-grid">
+      <div class="col-lg-7">
+        <div class="campus-card campus-main">
+          <img
+            src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85"
+            alt="University campus buildings"
+          >
+          <div class="campus-overlay">
+            <span>01 / OUR ENVIRONMENT</span>
+            <h3>A place to belong.</h3>
+            <p>Find your space to learn, connect and grow.</p>
           </div>
+        </div>
+      </div>
 
-
-            <!-- Application Button -->
-            <a
-                href="application.html"
-                class="btn btn-outline-primary">
-
-                Apply Now
-
-            </a>
-
+      <div class="col-lg-5">
+        <div class="campus-card campus-secondary">
+          <img
+            src="https://images.pexels.com/photos/32103405/pexels-photo-32103405.jpeg"
+            alt="University students celebrating together"
+          >
+          <div class="campus-overlay">
+            <span>02 / STUDENT EXPERIENCE</span>
+            <h3>Make every moment count.</h3>
+          </div>
         </div>
 
-    </section>
+        <div class="campus-bottom">
+          <div>
+            <span class="campus-label">YOUR NEXT CHAPTER</span>
+            <p>Discover the experience waiting for you.</p>
+          </div>
+          <a href="#admissions" class="campus-arrow" aria-label="Explore admissions">
+            ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- ADMISSION UPDATES -->
+  
+
+<section class="admissions-section container-fluid py-5 px-3 px-lg-5">
+
+  <div class="admissions-panel">
+    <div class="row align-items-center g-4">
+
+      <!-- Left: Admissions Information -->
+      <div class="col-lg-7">
+        <div class="admissions-tag">
+          <span class="status-dot"></span>
+          ADMISSIONS OFFICE
+        </div>
+
+        <h2 class="admissions-title">
+          Your future starts <br>
+          <span>with one application.</span>
+        </h2>
+
+        <p class="admissions-description">
+          Take the next step towards your academic goals.
+          Explore your opportunities and submit your application
+          before the official deadline.
+        </p>
+
+        <div class="admissions-notice">
+          <div class="notice-icon">!</div>
+          <div>
+            <h6>Application reminder</h6>
+            <p>Ensure all required documents are ready before applying.</p>
+          </div>
+        </div>
+
+        <a href="application.html" class="btn admissions-btn">
+          Start Your Application <span>↗</span>
+        </a>
+      </div>
+
+      <!-- Right: Application Progress -->
+      <div class="col-lg-5">
+        <div class="admissions-progress-card">
+
+          <div class="progress-heading">
+            <div>
+              <span class="progress-eyebrow">APPLICATION GUIDE</span>
+              <h5>Your next steps</h5>
+            </div>
+            <span class="progress-symbol">01—03</span>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h6>Choose your programme</h6>
+              <p>Find a course that matches your goals.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h6>Prepare your documents</h6>
+              <p>Gather your academic records and details.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h6>Submit your application</h6>
+              <p>Complete and send your application online.</p>
+            </div>
+          </div>
+
+          <div class="progress-footer">
+            <span>Ready to take the first step?</span>
+            <span class="footer-arrow">→</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
     <!-- >footer -->
     <footer
         class="container-fluid bg-dark text-white text-center p-4">

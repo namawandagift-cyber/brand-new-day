@@ -143,4 +143,278 @@
         font-weight: 500;
        
     }
+    
+/* ====================================
+   UNIVERSITY PROGRAMS - PROFESSIONAL
+==================================== */
+
+.university-programs {
+    background: #f7f8fa;
+    color: #17253d;
+    font-family: inherit;
+}
+
+.programs-header {
+    max-width: 720px;
+}
+
+.programs-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #a77b32;
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+}
+
+.programs-header h2 {
+    margin-bottom: 18px;
+    color: #10233f;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    font-weight: 800;
+    letter-spacing: -1.3px;
+}
+
+.heading-line {
+    width: 58px;
+    height: 3px;
+    margin: 0 auto 22px;
+    background: #b9924b;
+}
+
+.programs-header p {
+    margin: 0;
+    color: #647184;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+/* PROGRAM CARDS */
+
+.university-program-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e7eaf0;
+    border-radius: 5px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.university-program-card:hover {
+    transform: translateY(-5px);
+    border-color: #d8c49f;
+    box-shadow: 0 16px 36px rgba(16, 35, 63, 0.09);
+}
+
+/* IMAGE AREA */
+
+.program-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #e5e9ef;
+}
+
+.program-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.university-program-card:hover .program-image img {
+    transform: scale(1.045);
+}
+
+.program-index {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: #10233f;
+    color: #ffffff;
+    border-bottom: 2px solid #c6a15e;
+    font-size: 0.83rem;
+    font-weight: 700;
+}
+
+/* CARD CONTENT */
+
+.program-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 25px 25px;
+}
+
+.program-category {
+    margin-bottom: 11px;
+    color: #a77b32;
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.program-card-body h3 {
+    margin-bottom: 13px;
+    color: #10233f;
+    font-size: 1.32rem;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.program-card-body p {
+    margin-bottom: 23px;
+    color: #657184;
+    font-size: 0.93rem;
+    line-height: 1.85;
+}
+
+/* READ MORE */
+
+.program-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding: 0 0 5px;
+    border: 0;
+    border-bottom: 1px solid #c6a15e;
+    background: transparent;
+    color: #10233f;
+    font-size: 0.9rem;
+    font-weight: 750;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.program-read-more span {
+    color: #a77b32;
+    transition: transform 0.2s ease;
+}
+
+.program-read-more:hover {
+    color: #a77b32;
+}
+
+.program-read-more:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* BOTTOM CALL TO ACTION */
+
+.programs-bottom {
+    padding: 48px 20px;
+    border-top: 1px solid #e2e6ed;
+}
+
+.programs-bottom h3 {
+    margin-bottom: 14px;
+    color: #10233f;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 800;
+}
+
+.programs-bottom p {
+    margin-bottom: 25px;
+    color: #657184;
+    line-height: 1.8;
+}
+
+.programs-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 23px;
+    border: 1px solid #10233f;
+    background: #10233f;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.programs-cta-button:hover {
+    border-color: #a77b32;
+    background: #a77b32;
+    color: #ffffff;
+}
+
+/* MODALS */
+
+.university-modal {
+    overflow: hidden;
+    border: 0;
+    border-radius: 6px;
+}
+
+.university-modal .modal-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #e9edf2;
+}
+
+.university-modal .modal-title {
+    color: #10233f;
+    font-weight: 750;
+}
+
+.university-modal .modal-body {
+    padding: 24px;
+    color: #657184;
+    font-size: 0.96rem;
+    line-height: 1.9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767.98px) {
+    .university-programs {
+        padding-top: 55px !important;
+        padding-bottom: 35px !important;
+    }
+
+    .programs-header {
+        margin-bottom: 35px !important;
+    }
+
+    .program-image {
+        height: 220px;
+    }
+
+    .program-card-body {
+        padding: 23px 21px;
+    }
+
+    .programs-bottom {
+        padding-top: 38px;
+        padding-bottom: 25px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .university-program-card,
+    .program-image img,
+    .program-read-more span,
+    .programs-cta-button {
+        transition: none;
+    }
+
+    .university-program-card:hover,
+    .university-program-card:hover .program-image img {
+        transform: none;
+    }
+}
+
 }
